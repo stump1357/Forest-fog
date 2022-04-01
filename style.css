@@ -86,4 +86,7 @@ img:hover {
     text-align: center;
     font-size: 1.5rem;
   }
+  .img{
+  left:20%;
+  }
 }
