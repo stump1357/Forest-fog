@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+}
+
+.bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation-name: show;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container a {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.container .header-main {
+  font-size: 10rem;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  background: repeating-linear-gradient(white, white 59px, transparent 172px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+}
+
+.container .header-second {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.img {
+  width: 80%;
+  height: auto;
+  position: relative;
+  left: 30%;
+}
+
+img:hover {
+  filter: invert(1);
+  transition: 1s linear;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .header-main {
+    font-size: 8rem;
+    background: repeating-linear-gradient(white, white 74px, transparent 137px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  .container .header-second {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
